@@ -1,0 +1,266 @@
+[gd_scene load_steps=13 format=3 uid="uid://q0avvhcb2idx"]
+
+[ext_resource type="Script" uid="uid://bxarm0vdoj4u6" path="res://Scripts/Verlon.gd" id="1_vv5tn"]
+[ext_resource type="PackedScene" uid="uid://bdvffxo52k1rn" path="res://Scenes/character_base.tscn" id="2_g1pev"]
+[ext_resource type="Texture2D" uid="uid://d4nmfkiadmb0m" path="res://Assets/DSC04220-Sheet-export.png" id="3_b47pi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3qfw"]
+size = Vector2(126, 342)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0wfqb"]
+radius = 46.0
+height = 326.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hkqur"]
+radius = 34.0588
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jp14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nfcv"]
+
+[sub_resource type="Animation" id="Animation_102iw"]
+resource_name = "H"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hit/Circ:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hit/Circ:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(448, 233), Vector2(418, 210), Vector2(418, 240)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hit/Circ:shape:radius")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [34.0588, 48.0416, 48.0416]
+}
+
+[sub_resource type="Animation" id="Animation_0eydb"]
+resource_name = "H_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hit/Circ:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hit/Circ:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(448, 233), Vector2(418, 210), Vector2(418, 240)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hit/Circ:shape:radius")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [34.0588, 48.0416, 48.0416]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:frame_coords")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(9, 0), Vector2i(10, 0), Vector2i(11, 0), Vector2i(12, 0), Vector2i(13, 0), Vector2i(13, 0), Vector2i(15, 0), Vector2i(6, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sg7iv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hit/Circ:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hit/Circ:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(448, 233)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hit/Circ:shape:radius")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [34.0588]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:frame_coords")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(9, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rgv2v"]
+_data = {
+&"H": SubResource("Animation_102iw"),
+&"H_2": SubResource("Animation_0eydb"),
+&"RESET": SubResource("Animation_sg7iv")
+}
+
+[node name="Verlon" type="CharacterBody2D"]
+script = ExtResource("1_vv5tn")
+
+[node name="CharacterBase" parent="." instance=ExtResource("2_g1pev")]
+LightAttack = 81
+HeavyAttack = 87
+Special = 69
+FWD = 68
+BWD = 65
+JMP = 87
+CRC = 83
+ForwardSpeed = 400.0
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(552, 329)
+shape = SubResource("RectangleShape2D_p3qfw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(529, 320)
+texture = ExtResource("3_b47pi")
+hframes = 24
+frame = 9
+
+[node name="Hurt" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt"]
+position = Vector2(552, 333)
+shape = SubResource("CapsuleShape2D_0wfqb")
+debug_color = Color(0, 0.643137, 0.321569, 0.419608)
+
+[node name="Hit" type="Area2D" parent="."]
+
+[node name="Circ" type="CollisionShape2D" parent="Hit"]
+position = Vector2(448, 233)
+shape = SubResource("CircleShape2D_hkqur")
+disabled = true
+debug_color = Color(0.960784, 0, 0.52549, 0.419608)
+
+[node name="Rect1" type="CollisionShape2D" parent="Hit"]
+position = Vector2(418, 240)
+shape = SubResource("RectangleShape2D_3jp14")
+disabled = true
+debug_color = Color(0.960784, 0, 0.52549, 0.419608)
+
+[node name="Rect2" type="CollisionShape2D" parent="Hit"]
+position = Vector2(418, 240)
+shape = SubResource("RectangleShape2D_1nfcv")
+disabled = true
+debug_color = Color(0.960784, 0, 0.52549, 0.419608)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rgv2v")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.063
+one_shot = true
+
+[connection signal="emitingInput" from="CharacterBase" to="." method="_on_character_base_emiting_input"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

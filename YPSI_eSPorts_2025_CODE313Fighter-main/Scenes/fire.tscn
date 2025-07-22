@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3d22lxx46hcd"]
+
+[ext_resource type="Script" uid="uid://bowvqo5y11tiw" path="res://Scenes/fire.gd" id="1_6cgax"]
+
+[sub_resource type="Curve" id="Curve_0e48y"]
+_data = [Vector2(0.0113636, 1), 0.0, 0.0, 0, 0, Vector2(0.988636, 0.426966), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_epypp"]
+offsets = PackedFloat32Array(0.0333333, 0.3, 0.486667, 0.693333, 0.84, 0.973333)
+colors = PackedColorArray(0.98275, 6.08854e-06, 1.54018e-06, 1, 1, 0.349762, 0, 1, 1, 0.647059, 0, 1, 1, 1, 0, 1, 1, 0.737255, 0, 1, 1, 0.737255, 0, 0)
+
+[node name="fire" type="Node2D"]
+light_mask = 3
+visibility_layer = 3
+scale = Vector2(2, 2)
+script = ExtResource("1_6cgax")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 2000
+lifetime = 0.5
+emission_shape = 1
+emission_sphere_radius = 10.0
+gravity = Vector2(0, -600)
+radial_accel_min = -60.0
+radial_accel_max = -30.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_0e48y")
+color_ramp = SubResource("Gradient_epypp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, -9)
+scale = Vector2(2, 2)
+zoom = Vector2(5, 5)

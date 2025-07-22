@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://j3rbv8bwbkbi"]
+
+[ext_resource type="Script" uid="uid://c2nsl68fesi2c" path="res://Scripts/GUI.gd" id="1_sqmhn"]
+[ext_resource type="StyleBox" uid="uid://dha6n4pe4km5i" path="res://Styles/new_style_box_flat.tres" id="2_8j45u"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqmhn")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar2" type="ProgressBar" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -419.0
+offset_bottom = 27.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/fill = ExtResource("2_8j45u")
+value = 50.0
+fill_mode = 1
+show_percentage = false
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel"]
+layout_mode = 1
+offset_right = 419.0
+offset_bottom = 27.0
+theme_override_styles/fill = ExtResource("2_8j45u")
+value = 50.0
+show_percentage = false

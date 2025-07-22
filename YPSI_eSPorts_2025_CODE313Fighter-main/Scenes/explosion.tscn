@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://knfovswniscj"]
+
+[ext_resource type="Script" uid="uid://c4bpp3hhi1cij" path="res://Scenes/explosion.gd" id="1_aayv4"]
+
+[sub_resource type="Curve" id="Curve_vxas0"]
+_data = [Vector2(0.119318, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.168539), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="explosion" type="Node2D"]
+scale = Vector2(2, 3)
+script = ExtResource("1_aayv4")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+scale = Vector2(2, 3)
+amount = 200
+lifetime = 0.5
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_vxas0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(2, 3)
+zoom = Vector2(5, 5)

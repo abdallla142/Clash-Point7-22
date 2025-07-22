@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd4dj8cd766sq"]
+
+[ext_resource type="Script" uid="uid://dh8libol1kfft" path="res://Scripts/Gameui.gd" id="1_f5mh8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iecbt"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f5mh8")
+
+[node name="p1bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 30.0
+offset_right = 1105.0
+offset_bottom = 57.0
+value = 40.0
+fill_mode = 1
+show_percentage = false
+
+[node name="p2bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 28.0
+offset_right = 349.0
+offset_bottom = 55.0
+value = 40.0
+show_percentage = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 14.0
+offset_right = 651.0
+offset_bottom = 77.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 75.0
+text = "hrll"
+label_settings = SubResource("LabelSettings_iecbt")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[connection signal="changed" from="p1bar" to="." method="_on_p_1_bar_changed"]
+[connection signal="value_changed" from="p1bar" to="." method="_on_p_1_bar_value_changed"]
+[connection signal="value_changed" from="p2bar" to="." method="_on_p_2_bar_value_changed"]
