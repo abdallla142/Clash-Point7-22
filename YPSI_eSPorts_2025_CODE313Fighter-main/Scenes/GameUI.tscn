@@ -1,6 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd4dj8cd766sq"]
+[gd_scene load_steps=11 format=3 uid="uid://bd4dj8cd766sq"]
 
 [ext_resource type="Script" uid="uid://dh8libol1kfft" path="res://Scripts/Gameui.gd" id="1_f5mh8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyage"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 0.388235)
+
+[sub_resource type="Gradient" id="Gradient_37hul"]
+colors = PackedColorArray(0.278431, 0.694118, 0.858824, 1, 0.772549, 0.454902, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_po7eo"]
+gradient = SubResource("Gradient_37hul")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frnsy"]
+texture = SubResource("GradientTexture1D_po7eo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_co6lq"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 0.27451)
+
+[sub_resource type="Gradient" id="Gradient_wjrrg"]
+colors = PackedColorArray(0.466667, 0, 0, 1, 1, 0.847059, 0.552941, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d8tla"]
+gradient = SubResource("Gradient_wjrrg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tii1l"]
+texture = SubResource("GradientTexture1D_d8tla")
 
 [sub_resource type="LabelSettings" id="LabelSettings_iecbt"]
 font_size = 40
@@ -21,6 +45,8 @@ offset_left = 794.0
 offset_top = 30.0
 offset_right = 1105.0
 offset_bottom = 57.0
+theme_override_styles/background = SubResource("StyleBoxFlat_tyage")
+theme_override_styles/fill = SubResource("StyleBoxTexture_frnsy")
 value = 40.0
 fill_mode = 1
 show_percentage = false
@@ -31,6 +57,8 @@ offset_left = 38.0
 offset_top = 28.0
 offset_right = 349.0
 offset_bottom = 55.0
+theme_override_styles/background = SubResource("StyleBoxFlat_co6lq")
+theme_override_styles/fill = SubResource("StyleBoxTexture_tii1l")
 value = 40.0
 show_percentage = false
 

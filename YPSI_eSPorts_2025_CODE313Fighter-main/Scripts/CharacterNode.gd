@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = 400.0
+@export var JUMP_VELOCITY = 400.0
 const maxHP = 300
 var AttackName
 
@@ -20,6 +20,7 @@ signal damaged(amount, thisplayer)
 
 @onready var pTimer = $Timer
 @onready var player = $PLayer
+@export var thisacharacterIsTheWrongway = true
 @export var FlipX = true
 @onready var spriteAni = $PLayer/AnimationPlayer
 
@@ -39,6 +40,7 @@ enum aniState {
 }
 
 var thisState = aniState.IDLE
+
 
 func _ready():
 	rTransform.scale.x = boolNegPosReturn(!FlipX)
@@ -72,10 +74,18 @@ func Attack2():
 
 func KeyGetAxis(key1, key2) -> int:
 	var result = 0
+	
 	if Input.is_key_label_pressed(key1):
-		result += 1
+		FlipX = true
+		result = 1
 	if Input.is_key_label_pressed(key2):
-		result -= 1
+		FlipX = false
+		result = -1
+	
+	rTransform.scale.x = boolNegPosReturn(!FlipX)
+	$HitArea2D.scale.x = boolNegPosReturn(!FlipX)
+	
+	player.flip_h = FlipX
 	return result
 
 func boolNegPosReturn(boolean) -> int:

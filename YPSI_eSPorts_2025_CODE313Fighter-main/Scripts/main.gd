@@ -1,19 +1,23 @@
 extends Node2D
 @onready var player1 = $p1
 @onready var player2 = $CharacterBody2D
+@onready var CharHolder = $CharacterHolder
 @onready var GUI = $CanvasLayer/GUI
 @onready var Win_Animation = $CanvasLayer/Label/AnimationPlayer
 @onready var Win_text = $CanvasLayer/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player1 = CharHolder.get_children()[0]
+	player2 = CharHolder.get_children()[1]
+	
 	Win_text.hide()
+	
 	var children = get_children()
+	
 	player1.damaged.connect(updateGUI)
 	player2.damaged.connect(updateGUI)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
@@ -38,9 +42,9 @@ func reload_scene():
 	await Win_Animation.animation_finished
 	print("plING")
 	# Get the current scene's file pathh
-	var current_scene = get_tree().current_scene.scene_file_path
+	var current_scene = "res://Scenes/main.tscn"
 	# Reload the jjdjjscen
-	get_tree().change_scene_to_file(current_scene)
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 
 func _on_gui_player_2_wins() -> void:	
