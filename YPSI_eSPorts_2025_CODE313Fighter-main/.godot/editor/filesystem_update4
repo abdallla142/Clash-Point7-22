@@ -1,8 +1,0 @@
-res://Scenes/Menu.tscn
-res://Scenes/GameUI.tscn
-res://Scenes/main.tscn
-res://Scenes/yahya.tscn
-res://Scenes/Abdalla.tscn
-res://Scripts/main.gd
-res://Scripts/CharacterNode.gd
-res://Scenes/camera_2d.gd
