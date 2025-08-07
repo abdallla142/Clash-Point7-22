@@ -1,6 +1,1 @@
-res://Scenes/yahya.tscn
-res://Scripts/CharacterNode.gd
-res://Scenes/Menu.tscn
-res://Scenes/GameUI.tscn
-res://Scenes/main.tscn
-res://Scenes/Abdalla.tscn
+res://Scenes/control.tscn

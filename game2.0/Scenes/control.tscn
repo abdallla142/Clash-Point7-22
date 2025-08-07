@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=3 uid="uid://5e2ns4a2ljy5"]
+
+[ext_resource type="Texture2D" uid="uid://biinogj4s205n" path="res://Assets/Copy of Charcter Select (1).png" id="1_0fbet"]
+[ext_resource type="Script" path="res://character select.gd" id="1_iy58a"]
+[ext_resource type="FontFile" uid="uid://cs0ibry8nukf4" path="res://Assets/nougat-extrablack-webfont (2).ttf" id="2_62e2m"]
+[ext_resource type="Texture2D" uid="uid://cp2lkcqafi4qg" path="res://Assets/Hamzahnum.png" id="4_6a6wx"]
+[ext_resource type="Texture2D" uid="uid://bwc34birrqhyb" path="res://Assets/yahya button.png" id="5_sky72"]
+[ext_resource type="Texture2D" uid="uid://dhv4pn820pbnb" path="res://Assets/abdalla button.png" id="6_0ytqx"]
+[ext_resource type="Texture2D" uid="uid://dss03ep8ywn8a" path="res://Scenes/ibrahim button.png" id="7_pxugv"]
+[ext_resource type="Texture2D" uid="uid://d4fnwh5k6is7m" path="res://Assets/P1.png" id="8_sky72"]
+[ext_resource type="Texture2D" uid="uid://bcwx1htgq8cb" path="res://Assets/p2.png" id="9_0ytqx"]
+
+[node name="CharacterSelect" type="Control"]
+custom_minimum_size = Vector2(1350, 648)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 90.0
+offset_right = 274.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+script = ExtResource("1_iy58a")
+
+[node name="Background" type="TextureRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("1_0fbet")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 237.778
+offset_top = -100.0
+offset_right = 1096.78
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("2_62e2m")
+theme_override_font_sizes/font_size = 100
+text = "Character Select"
+
+[node name="Characters" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 191.0
+offset_right = 771.0
+offset_bottom = 385.0
+scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 150
+
+[node name="HamzahButton" type="TextureButton" parent="Characters"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("4_6a6wx")
+
+[node name="YahyaButton" type="TextureButton" parent="Characters"]
+layout_mode = 2
+texture_normal = ExtResource("5_sky72")
+
+[node name="AbdallaButton" type="TextureButton" parent="Characters"]
+layout_mode = 2
+texture_normal = ExtResource("6_0ytqx")
+
+[node name="IbrahimButton" type="TextureButton" parent="Characters"]
+layout_mode = 2
+texture_normal = ExtResource("7_pxugv")
+
+[node name="p1_indicator" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 88.8889
+offset_right = 40.0
+offset_bottom = 128.889
+texture = ExtResource("8_sky72")
+
+[node name="p2_indicator" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_0ytqx")

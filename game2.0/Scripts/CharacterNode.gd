@@ -20,8 +20,8 @@ signal damaged(amount, thisplayer)
 
 @onready var pivot = $Pivot
 @onready var pTimer = $Pivot/Timer
-@onready var player = $PLayer
-@onready var spriteAni = $PLayer/AnimationPlayer
+@onready var player = $Pivot/PLayer
+@onready var spriteAni = $Pivot/PLayer/AnimationPlayer
 @onready var rTransform = $RemoteTransform2D
 @onready var hitbox = $Pivot/HitArea2D
 @onready var hurtbox = $Pivot/HurtArea2D
