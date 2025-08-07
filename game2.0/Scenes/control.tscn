@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://5e2ns4a2ljy5"]
 
 [ext_resource type="Texture2D" uid="uid://biinogj4s205n" path="res://Assets/Copy of Charcter Select (1).png" id="1_0fbet"]
-[ext_resource type="Script" path="res://character select.gd" id="1_iy58a"]
+[ext_resource type="Script" uid="uid://tlmvpms5l7x5" path="res://Scenes/CharacterSelect.gd" id="1_fx7jt"]
 [ext_resource type="FontFile" uid="uid://cs0ibry8nukf4" path="res://Assets/nougat-extrablack-webfont (2).ttf" id="2_62e2m"]
 [ext_resource type="Texture2D" uid="uid://cp2lkcqafi4qg" path="res://Assets/Hamzahnum.png" id="4_6a6wx"]
 [ext_resource type="Texture2D" uid="uid://bwc34birrqhyb" path="res://Assets/yahya button.png" id="5_sky72"]
@@ -23,7 +23,7 @@ offset_bottom = 90.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.9, 0.9)
-script = ExtResource("1_iy58a")
+script = ExtResource("1_fx7jt")
 
 [node name="Background" type="TextureRect" parent="."]
 clip_contents = true
